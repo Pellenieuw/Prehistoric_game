@@ -1,0 +1,73 @@
+class Spear1(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((25,2))
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (641, 250)
+
+    def update(self):
+        self.rect.x -= velocity
+        if self.rect.x <= (360):
+            self.kill()
+            
+
+        if self.rect.x <= (367) and direction == "Right":
+            self.kill()
+            
+
+class Spear2(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((25,2))
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (34, 250)
+
+    def update(self):
+        self.rect.x += velocity
+        if self.rect.x >= (315):
+            self.kill()
+            
+
+        if self.rect.x >= (305) and direction == "Left":
+            self.kill()
+            
+        
+
+class Spear3(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((2,25))
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (350, 34)
+
+    def update(self):
+        self.rect.y += velocity
+        if self.rect.y >= (215):
+            self.kill()
+            
+
+        if self.rect.y >= (205) and direction == "Up":
+            self.kill()
+            
+        
+
+
+class Spear4(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((2,25))
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (350, 441)
+
+    def update(self):
+        self.rect.y -= velocity
+        if self.rect.y <= (260):
+            self.kill()
+            
+
+        if self.rect.y <= (268) and direction == "Down":
+            self.kill()
